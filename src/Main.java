@@ -17,10 +17,10 @@ public class Main {
         int result = 0;
         switch(operator){
             case 1:
-                result = n1 + n2;
+                System.out.println("addition is " + Addition(n1,n2));
                 break;
             case 2:
-                result = n1 - n2;
+                System.out.println("Soustraction is " + Soustraction(n1,n2));
                 break;
             case 3:
                 result = n1 + n2;
@@ -38,5 +38,11 @@ public class Main {
                 result = n1 + n2;
                 break;
         }
+    }
+    static int Addition(int n1, int n2) {
+        return n1 + n2;
+    }
+    static int Soustraction(int n1, int n2){
+        return n1 - n2;
     }
 }
