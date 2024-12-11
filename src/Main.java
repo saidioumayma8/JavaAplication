@@ -35,13 +35,13 @@ public class Main {
                 }
                 break;
             case 5:
-                result = n1 / n2;
+                System.out.println("puissance is " + puissance(n1,n2));
                 break;
             case 6:
-                result = n1 + n2;
+                System.out.println("Racine carrée is " + Racinecarrée(n1,n2));
                 break;
             case 7:
-                result = n1 + n2;
+                System.out.println("Factorielle is " + Factorielle(n1,n2));
                 break;
             case 8:
                 System.out.println(" au revoir");
@@ -60,6 +60,19 @@ public class Main {
         return n1 * n2;
     }
     static int Division(int n1, int n2){
+        return n1 / n2;
+    }
+    static int puissance(int n1, int n2){
+        int result = 1;
+        for (int i = 1; i <= n2; i++) {
+            result *= n1;
+        }
+        return result;
+    }
+    static int Racinecarrée(int n1, int n2){
+        return n1 / n2;
+    }
+    static int Factorielle(int n1, int n2){
         return n1 / n2;
     }
 }
