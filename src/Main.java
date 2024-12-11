@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -70,9 +71,15 @@ public class Main {
         return result;
     }
     static int Racinecarrée(int n1, int n2){
+
         return n1 / n2;
     }
-    static int Factorielle(int n1, int n2){
-        return n1 / n2;
+    static int Factorielle(int n){
+        static int Factorial (int n){
+            int result=1;
+            for(int i = 1;i <= n ;i++){
+                result = result * i;
+            }return result;
+        }
     }
 }
