@@ -6,7 +6,7 @@ import java.lang.Math.*;
 public class Main {
     public static void main(String[] arguments) {
 
-        System.out.println("1- Add(+) \n2- soustraction(-) \n3-Multiplication(*) \n4-Division(/) \n5-Puissance \n6-Racine carrée \n7-Factorielle\n 8-quite");
+        System.out.println("1- Add(+) \n2- soustraction(-) \n3-Multiplication(*) \n4-Division(/) \n5-Puissance \n6-Racine carree \n7-Factorielle\n 8-quite");
         System.out.println("Chosse Operator: ");
         Scanner sc = new Scanner(System.in);
         int operator = sc.nextInt();
@@ -14,8 +14,10 @@ public class Main {
         if (operator != 8) {
             System.out.println("Entrez le premier nombre : ");
             n1 = sc.nextInt();
-            System.out.println("Entrez le deuxième nombre : ");
-            n2 = sc.nextInt();
+            if (operator != 6 && operator != 7) {
+                System.out.println("Entrez le deuxieme nombre : ");
+                n2 = sc.nextInt();
+            }
         }
         int result = 0;
         switch(operator){
@@ -39,16 +41,16 @@ public class Main {
                 System.out.println("puissance is " + puissance(n1,n2));
                 break;
             case 6:
-                System.out.println("Racine carrée is " + Racinecarrée(n1,n2));
+                System.out.println("Racine carree is " + Racinecarree(n1));
                 break;
             case 7:
-                System.out.println("Factorielle is " + Factorielle(n1,n2));
+                System.out.println("Factorielle is " + Factorielle(n1));
                 break;
             case 8:
                 System.out.println(" au revoir");
                 break;
             default:
-                System.out.println("Opérateur invalide !");
+                System.out.println("Operateur invalide !");
         }
     }
     static int Addition(int n1, int n2) {
@@ -70,16 +72,15 @@ public class Main {
         }
         return result;
     }
-    static int Racinecarrée(int n1, int n2){
+    static double Racinecarree(int n1){
 
-        return n1 / n2;
+        return Math.sqrt(n1);
     }
-    static int Factorielle(int n){
-        static int Factorial (int n){
+    static int Factorielle(int n1){
             int result=1;
-            for(int i = 1;i <= n ;i++){
+            for(int i = 1;i <= n1 ;i++){
                 result = result * i;
             }return result;
         }
-    }
+
 }
