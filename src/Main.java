@@ -6,52 +6,56 @@ import java.lang.Math.*;
 public class Main {
     public static void main(String[] arguments) {
 
-        System.out.println("1- Add(+) \n2- soustraction(-) \n3-Multiplication(*) \n4-Division(/) \n5-Puissance \n6-Racine carree \n7-Factorielle\n 8-quite");
-        System.out.println("Chosse Operator: ");
         Scanner sc = new Scanner(System.in);
-        int operator = sc.nextInt();
-        int n1 = 0, n2 = 0;
-        if (operator != 8) {
-            System.out.println("Entrez le premier nombre : ");
-            n1 = sc.nextInt();
-            if (operator != 6 && operator != 7) {
-                System.out.println("Entrez le deuxieme nombre : ");
-                n2 = sc.nextInt();
-            }
-        }
-        int result = 0;
-        switch(operator){
-            case 1:
-                System.out.println("addition is " + Addition(n1,n2));
-                break;
-            case 2:
-                System.out.println("Soustraction is " + Soustraction(n1,n2));
-                break;
-            case 3:
-                System.out.println("Multiplication is " + Multiplication(n1,n2));
-                break;
-            case 4:
-                if (n2 != 0) {
-                    System.out.println("Division is " + Division(n1,n2));
-                } else {
-                    System.out.println("Error: Division by zero!");
+        int operator;
+
+        do {
+            System.out.println("1- Add(+) \n2- soustraction(-) \n3-Multiplication(*) \n4-Division(/) \n5-Puissance \n6-Racine carree \n7-Factorielle\n 8-quite");
+            System.out.println("Chosse Operator: ");
+            operator = sc.nextInt();
+            int n1 = 0, n2 = 0;
+            if (operator != 8) {
+                System.out.println("Entrez le premier nombre : ");
+                n1 = sc.nextInt();
+                if (operator != 6 && operator != 7) {
+                    System.out.println("Entrez le deuxieme nombre : ");
+                    n2 = sc.nextInt();
                 }
-                break;
-            case 5:
-                System.out.println("puissance is " + puissance(n1,n2));
-                break;
-            case 6:
-                System.out.println("Racine carree is " + Racinecarree(n1));
-                break;
-            case 7:
-                System.out.println("Factorielle is " + Factorielle(n1));
-                break;
-            case 8:
-                System.out.println(" au revoir");
-                break;
-            default:
-                System.out.println("Operateur invalide !");
-        }
+            }
+            int result = 0;
+            switch (operator) {
+                case 1:
+                    System.out.println("addition is " + Addition(n1, n2));
+                    break;
+                case 2:
+                    System.out.println("Soustraction is " + Soustraction(n1, n2));
+                    break;
+                case 3:
+                    System.out.println("Multiplication is " + Multiplication(n1, n2));
+                    break;
+                case 4:
+                    if (n2 != 0) {
+                        System.out.println("Division is " + Division(n1, n2));
+                    } else {
+                        System.out.println("Error: Division by zero!");
+                    }
+                    break;
+                case 5:
+                    System.out.println("puissance is " + puissance(n1, n2));
+                    break;
+                case 6:
+                    System.out.println("Racine carree is " + Racinecarree(n1));
+                    break;
+                case 7:
+                    System.out.println("Factorielle is " + Factorielle(n1));
+                    break;
+                case 8:
+                    System.out.println(" au revoir");
+                    break;
+                default:
+                    System.out.println("Operateur invalide !");
+            }
+        }while(operator != 8);
     }
     static int Addition(int n1, int n2) {
         return n1 + n2;
