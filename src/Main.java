@@ -34,11 +34,15 @@ public class Main {
                     System.out.println("Multiplication is " + Multiplication(n1, n2));
                     break;
                 case 4:
-                    if (n2 != 0) {
-                        System.out.println("Division is " + Division(n1, n2));
-                    } else {
-                        System.out.println("Error: Division by zero!");
+                    while (n2 == 0) {
+                        System.out.println("Erreur: Division par zero Veuillez entrer un autre nombre.");
+                        System.out.print("Entrez le deuxieme nombre : ");
+                        n2 = sc.nextInt();
                     }
+
+
+                    System.out.println("Division is " + Division(n1, n2));
+
                     break;
                 case 5:
                     System.out.println("puissance is " + puissance(n1, n2));
